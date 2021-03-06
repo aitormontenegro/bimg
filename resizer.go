@@ -26,7 +26,8 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	println("ERROR: "+err)
+	println("ERROR: ")
+	println(err)
 	// Clone and define default options
 	o = applyDefaults(o, imageType)
 
