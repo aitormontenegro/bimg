@@ -49,7 +49,7 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	
+
 	println("PASA: ")
 
 	// If JPEG or HEIF image, retrieve the buffer
@@ -60,8 +60,7 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 		}
 	}
 
-	println("ERROR: ")
-	println(err)
+
 
 	inWidth := int(image.Xsize)
 	inHeight := int(image.Ysize)
