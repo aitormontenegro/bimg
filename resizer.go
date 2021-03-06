@@ -26,8 +26,7 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	println("ERROR: ")
-	println(err)
+
 	// Clone and define default options
 	o = applyDefaults(o, imageType)
 
@@ -50,6 +49,8 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	
+	println("PASA: ")
 
 	// If JPEG or HEIF image, retrieve the buffer
 	if rotated && (imageType == JPEG || imageType == HEIF || imageType == AVIF) && !o.NoAutoRotate {
@@ -58,6 +59,9 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 			return nil, err
 		}
 	}
+
+	println("ERROR: ")
+	println(err)
 
 	inWidth := int(image.Xsize)
 	inHeight := int(image.Ysize)
