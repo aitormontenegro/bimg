@@ -21,12 +21,12 @@ var (
 // with the passed options.
 func resizer(buf []byte, o Options) ([]byte, error) {
 	defer C.vips_thread_shutdown()
-
+	println("holaaaa")
 	image, imageType, err := loadImage(buf)
 	if err != nil {
 		return nil, err
 	}
-
+	println("ERROR: "+err)
 	// Clone and define default options
 	o = applyDefaults(o, imageType)
 
