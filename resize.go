@@ -11,6 +11,7 @@ import (
 func Resize(buf []byte, o Options) ([]byte, error) {
 	// Required in order to prevent premature garbage collection. See:
 	// https://github.com/h2non/bimg/pull/162
+	println("holaaaa")
 	defer runtime.KeepAlive(buf)
 	return resizer(buf, o)
 }
