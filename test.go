@@ -1,14 +1,14 @@
-package Main
+package main
 
 import (
 	"fmt"
 	"os"
-	"../bimg"
+	"./bimg"
   )
 
 func main(){
 
-	buffer, err := bimg.Read("testdata/test.jpg")
+	buffer, err := bimg.Read("bimg/testdata/test.jpg")
 	if err != nil {
 	  fmt.Fprintln(os.Stderr, err)
 	}
