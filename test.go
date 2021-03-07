@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-	"./bimg"
+	"../bimg"
   )
 
 func main(){
