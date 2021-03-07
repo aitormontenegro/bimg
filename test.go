@@ -7,11 +7,11 @@ import (
 
 func main(){
 
-	buffer, err    : = bimg.Read("testdata/test.jpg")
+	buffer, err: = bimg.Read("testdata/test.jpg")
 	if err != nil {
 	  fmt.Fprintln(os.Stderr, err)
 	}
-	newImage, err  : = bimg.NewImage(buffer).Convert(bimg.AVIF)
+	newImage, err: = bimg.NewImage(buffer).Convert(bimg.AVIF)
 	if err != nil {
 	  fmt.Fprintln(os.Stderr, err)
 	}
