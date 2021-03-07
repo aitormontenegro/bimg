@@ -20,5 +20,4 @@ func main(){
 	  fmt.Fprintln(os.Stderr, "The image was converted into avif")
 	}
 	bimg.Write("/tmp/new.jpg", newImage)
-	
 }
