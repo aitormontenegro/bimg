@@ -514,7 +514,7 @@ func vipsSave(image *C.VipsImage, o vipsSaveOptions) ([]byte, error) {
 	default:
 		saveErr = C.vips_jpegsave_bridge(tmpImage, &ptr, &length, strip, quality, interlace)
 	}
-	println("PASA: ")
+	println("PASA11111: ")
 
 	if int(saveErr) != 0 {
 		return nil, catchVipsError()
