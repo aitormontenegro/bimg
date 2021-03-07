@@ -371,7 +371,7 @@ vips_tiffsave_bridge(VipsImage *in, void **buf, size_t *len) {
 int
 vips_avifsave_bridge(VipsImage *in, void **buf, size_t *len, int strip, int quality, int lossless, int speed) {
 #if (VIPS_MAJOR_VERSION > 8 || (VIPS_MAJOR_VERSION >= 8 && VIPS_MINOR_VERSION > 10) || (VIPS_MAJOR_VERSION >= 8 && VIPS_MINOR_VERSION >= 10 && VIPS_MICRO_VERSION >= 2))
-    println("AQUI1");
+    print("AQUI1");
     return vips_heifsave_buffer(in, buf, len,
     "strip", INT_TO_GBOOLEAN(strip),
     "Q", quality,
@@ -381,7 +381,7 @@ vips_avifsave_bridge(VipsImage *in, void **buf, size_t *len, int strip, int qual
     NULL
     );
 #elif (VIPS_MAJOR_VERSION > 8 || (VIPS_MAJOR_VERSION == 8 && VIPS_MINOR_VERSION >= 9))
-    println("AQUI2");
+    print("AQUI2");
     return vips_heifsave_buffer(in, buf, len,
     "strip", INT_TO_GBOOLEAN(strip),
     "Q", quality,
