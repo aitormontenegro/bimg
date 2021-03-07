@@ -3,7 +3,6 @@ package bimg
 import (
 	"fmt"
 	"os"
-	"../bimg"
   )
 
 func main(){
