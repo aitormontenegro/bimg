@@ -21,7 +21,6 @@ var (
 // with the passed options.
 func resizer(buf []byte, o Options) ([]byte, error) {
 	defer C.vips_thread_shutdown()
-	println("holaaaa")
 	image, imageType, err := loadImage(buf)
 	if err != nil {
 		return nil, err
@@ -50,8 +49,6 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 		return nil, err
 	}
 
-	println("PASA: ")
-
 	// If JPEG or HEIF image, retrieve the buffer
 	if rotated && (imageType == JPEG || imageType == HEIF || imageType == AVIF) && !o.NoAutoRotate {
 		buf, err = getImageBuffer(image)
@@ -59,8 +56,6 @@ func resizer(buf []byte, o Options) ([]byte, error) {
 			return nil, err
 		}
 	}
-
-
 
 	inWidth := int(image.Xsize)
 	inHeight := int(image.Ysize)
