@@ -1,8 +1,9 @@
-package bimg
+package Main
 
 import (
 	"fmt"
 	"os"
+	"../bimg"
   )
 
 func main(){
